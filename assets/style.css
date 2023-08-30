@@ -1,6 +1,6 @@
 /* GENERAL STYLES */
 :root {
-  --header: #283845;
+  --dark: #283845;
   --bright-turquoise: #49E9E6;
   --background: #f3f7f4;
   --text: #7d84b2;
@@ -10,6 +10,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
@@ -18,16 +19,15 @@ body {
 /* HEADER */
 
 header {
-    padding: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: var(--header);
+    padding: 30px 30px 30px 0;
+    background-color: var(--dark);
 }
 
 header h1 {
     padding: 10px 10px 10px 50px;
     display: inline-block;
     font-size: 48px;
-    color: var(--header);
+    color: var(--dark);
     background-color: var(--bright-turquoise);
 }
 
@@ -53,11 +53,13 @@ header nav ul li {
 
 header nav a:hover {
     background-color: var(--bright-turquoise);
-    color: var(--header)
+    color: var(--dark)
 }
 
 /* HEADER PHOTO */
 .header-photo {
+    display: flex;
+    align-items: center;
     height: 300px;
     overflow: hidden;
     position: relative;
@@ -66,7 +68,7 @@ header nav a:hover {
 
 .header-photo img {
     object-fit: cover;
-    object-position: center center;
+    height: auto;
     width: 100%;
 }
 
@@ -76,6 +78,36 @@ header nav a:hover {
     bottom: 45px; 
     right: 60px; 
     background-color: var(--bright-turquoise);
-    color: var(--header);
+    color: var(--dark);
     padding: 10px;
+}
+
+/* SECTIONS */
+.content {
+    display: flex;
+    align-items: start;
+    padding: 30px 40px 30px 30px;
+}
+
+.content h2 {
+    font-size: 36px;
+    flex: 0 0 auto;
+    margin-right: 20px;
+    color: var(--text);
+    width: 15%;
+    white-space: normal;
+    text-align: right;
+}
+
+.section-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--text);
+    padding-left: 20px;
+}
+
+.section-content p {
+    margin-bottom: 10px; /* Adds some spacing between the paragraphs */
+    color: var(--dark);
 }
