@@ -318,8 +318,8 @@ h3 {
     }
 }
 
-/* MEDIA QUERRY 450px */
-@media (max-width: 650px) {
+/* MEDIA QUERRY 410px */
+@media (max-width: 410px) {
     header {
         height: 400px;
         width: 100%;
